@@ -5,25 +5,15 @@
 
 // *should work also on Leading and Trailing Spaces and caps.
  */
+
 /** given these inputs, capitalize each word with length greater than 2
  * "apple"            => "Apple"
    "apple of banana"  => "Apple of Banana"
    "one   space"      => "One   Space"
-   "   space WALK   " => "   Space Walk   "
+   "   space WALK   " => "   Space Walk   " 
  */
+
 // approach:
 // - first split the string
 // after we will check if each word has a length greater than 2 
-// after we will perform capitalization by taking the element at first index of each word and then capitalize it.
-function dropCaps(str) {
-    var splitted = str.split(" ");
-    var strn = "";
-    for (var _i = 0, splitted_1 = splitted; _i < splitted_1.length; _i++) {
-        var item = splitted_1[_i];
-        if (item.length > 2) {
-            strn = item.slice(0, 1).toUpperCase().concat(item.slice(1, item.length));
-        }
-    }
-    return strn;
-}
-console.log(dropCaps("apple of banana"));
+// after we will perform capitalization by taking the element at first index of each word and then capitalize it and consider white spaces to0
