@@ -55,3 +55,19 @@ let empObj2:IEmployee2 = { // this one also is ok
     empName: 'Carla',
     empDept: 'IT'
 }
+
+// Typescript READONLY Interface Poperties:
+
+// we can also be able to use interface to make a property readonly this means that once a property is assigned a value, it cannot be changed
+
+// example:
+
+interface Citizen {
+    name: string;
+    readonly SSN: number;
+}
+
+let personObj: Citizen = {SSN: 110555444, name: 'James Bond'}
+
+personObj.name = 'Steve Smith' // this is okay
+personObj.SSN = 22222222223 // this is not okay
