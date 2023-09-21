@@ -27,7 +27,14 @@ myGeeks()
 
 // example two:
 
-const myNumbers = (str:string) => {
-    const nums = str.match(/(\d+)/g)
-}
-console.log(myNumbers("gh12cdy695m1"))
+// write a function that extracts numbers in a string and returns the largest:
+
+export function solve(s: string): number {
+    const reg:RegExp = /(\d+)/g
+    const strNums = s.match(reg)
+    const numsArr:number[] = []
+    strNums?.forEach((item) => numsArr.push(Number(item)))
+    numsArr.sort((a, b) => a - b)
+    
+    return numsArr[numsArr.length - 1]
+  }
